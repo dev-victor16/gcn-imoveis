@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GCN Imóveis | Imóveis à Venda em Belo Horizonte, Barreiro e Região</title>
+  <meta name="description" content="Encontre casas, apartamentos e coberturas em Belo Horizonte, Barreiro, Contagem, Ibirité e região. Assessoria imobiliária transparente e segura com a GCN Imóveis (CRECI PJ 7064).">
+  <meta property="og:title" content="GCN Imóveis | Imóveis à Venda em Belo Horizonte, Barreiro e Região">
+  <meta property="og:description" content="Segurança na compra, venda e consultoria do seu imóvel em Belo Horizonte, Barreiro, Contagem e região metropolitana com a GCN Imóveis.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="GCN Imóveis">
+  <meta property="og:image" content="img/logo-gcn.png">
+  <meta name="format-detection" content="telephone=yes">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#" class="header-logo" aria-label="GCN Imóveis - Página inicial">
+        <img src="img/logo-gcn.png" alt="GCN Imóveis" class="logo-img">
+      </a>
+      
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="#imoveis">Imóveis</a>
+        <a href="#sobre">A Imobiliária</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#regioes">Regiões</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      
+      <a href="https://wa.me/5531971760210?text=Olá,%20gostaria%20de%20informações%20sobre%20imóveis%20da%20GCN%20Imóveis" class="header-contact-btn" target="_blank" rel="noopener">
+        Fale conosco
+      </a>
+      
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <img src="img/logo-gcn.png" alt="GCN Imóveis" class="mobile-logo-img">
+      </div>
+      <a href="#imoveis" onclick="closeMobileNav()">Imóveis</a>
+      <a href="#sobre" onclick="closeMobileNav()">A Imobiliária</a>
+      <a href="#servicos" onclick="closeMobileNav()">Serviços</a>
+      <a href="#regioes" onclick="closeMobileNav()">Regiões</a>
+      <a href="#contato" onclick="closeMobileNav()">Contato</a>
+      
+      <div class="mobile-nav-footer">
+        <p>Ligue ou envie WhatsApp</p>
+        <a href="tel:+553135829770">(31) 3582-9770</a>
+        <a href="https://wa.me/5531971760210" target="_blank" rel="noopener">(31) 97176-0210</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="img/hero.jpg" alt="Vista panorâmica residencial em Belo Horizonte e Região Metropolitana" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-text">
+          <span class="hero-label">Belo Horizonte, Barreiro e Região</span>
+          <h1 class="hero-title">O imóvel ideal<br>com a segurança que você merece</h1>
+          <p class="hero-subtitle">Especialistas em negócios imobiliários com foco na região do Barreiro, Belo Horizonte e cidades vizinhas. Consultoria dedicada, transparência e as melhores condições de negociação.</p>
+        </div>
+        
+        <div class="hero-search">
+          <h3>Buscar imóvel</h3>
+          <div class="search-field">
+            <label for="search-type">Finalidade</label>
+            <select id="search-type">
+              <option value="">Comprar ou alugar</option>
+              <option value="comprar">Comprar</option>
+              <option value="alugar">Alugar</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="search-property">Tipo do imóvel</label>
+            <select id="search-property">
+              <option value="">Todos os tipos</option>
+              <option value="apartamento">Apartamento</option>
+              <option value="casa">Casa</option>
+              <option value="cobertura">Cobertura</option>
+              <option value="lote">Lote / Terreno</option>
+              <option value="comercial">Comercial</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="search-location">Localização</label>
+            <select id="search-location">
+              <option value="">Todas as regiões</option>
+              <option value="barreiro">Belo Horizonte - Barreiro</option>
+              <option value="vale-do-jatoba">BH - Vale do Jatobá</option>
+              <option value="camargos">BH - Camargos</option>
+              <option value="contagem">Contagem</option>
+              <option value="ibirite">Ibirité</option>
+              <option value="sarzedo">Sarzedo</option>
+              <option value="mario-campos">Mário Campos</option>
+            </select>
+          </div>
+          <button class="search-btn" id="search-btn">Buscar imóveis</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ========== TRUST STRIP ========== -->
+  <div class="trust-strip">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item">
+          <span class="trust-number">Av. Senador Levindo Coelho, 1907</span>
+          <span class="trust-text">Vale do Jatobá (Barreiro) — Belo Horizonte, MG</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">CRECI PJ 7064</span>
+          <span class="trust-text">Credibilidade e Segurança Jurídica</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-number">(31) 3582-9770 | (31) 97176-0210</span>
+          <span class="trust-text">Atendimento Ágil via Fone e WhatsApp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========== IMÓVEIS DESTAQUE ========== -->
+  <section class="featured-section" id="imoveis">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header-left">
+          <p class="section-label">Oportunidades em Destaque</p>
+          <h2 class="section-title">Imóveis selecionados pela GCN Imóveis</h2>
+        </div>
+        <a href="https://www.gcnimoveis.com.br/imoveis-a-venda" target="_blank" rel="noopener" class="section-link">
+          Ver todos os imóveis
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      
+      <div class="properties-scroll stagger-children">
+        <!-- Property 1: Apartamento Camargos -->
+        <article class="property-item">
+          <div class="property-image">
+            <span class="property-tag">COD: GCN448269</span>
+            <img src="img/imovel-camargos.jpg" alt="Apartamento com 2 quartos à venda no bairro Camargos em Belo Horizonte" loading="lazy">
+          </div>
+          <div class="property-info">
+            <p class="property-type">Apartamento</p>
+            <h3 class="property-address">Apartamento 2 Quartos no Camargos</h3>
+            <p class="property-location">Belo Horizonte, MG</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                2 quartos
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 12h20"/></svg>
+                1 vaga
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V2l16 10-16 10z"/></svg>
+                44 m²
+              </span>
+            </div>
+            <p class="property-price">R$ 240.000 <small>/ venda</small></p>
+          </div>
+        </article>
+        
+        <!-- Property 2: Cobertura Europa -->
+        <article class="property-item">
+          <div class="property-image">
+            <span class="property-tag">COD: GCN447183</span>
+            <img src="img/imovel-europa.jpg" alt="Cobertura com 3 quartos à venda no bairro Europa em Contagem" loading="lazy">
+          </div>
+          <div class="property-info">
+            <p class="property-type">Cobertura</p>
+            <h3 class="property-address">Cobertura com Espaço Gourmet no Europa</h3>
+            <p class="property-location">Contagem, MG</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                3 quartos (1 suíte)
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 12h20"/></svg>
+                2 vagas livres
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V2l16 10-16 10z"/></svg>
+                110 m²
+              </span>
+            </div>
+            <p class="property-price">R$ 699.000 <small>/ venda</small></p>
+          </div>
+        </article>
+        
+        <!-- Property 3: Cobertura Palmeiras -->
+        <article class="property-item">
+          <div class="property-image">
+            <span class="property-tag">COD: GCN373528</span>
+            <img src="img/imovel-palmeiras.jpg" alt="Cobertura com 3 quartos à venda no bairro Palmeiras em Ibirité" loading="lazy">
+          </div>
+          <div class="property-info">
+            <p class="property-type">Cobertura</p>
+            <h3 class="property-address">Cobertura Ampla com Terraço no Palmeiras</h3>
+            <p class="property-location">Ibirité, MG</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                3 quartos
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 12h20"/></svg>
+                2 vagas
+              </span>
+              <span class="property-detail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V2l16 10-16 10z"/></svg>
+                151 m²
+              </span>
+            </div>
+            <p class="property-price">R$ 680.000 <small>/ venda</small></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SOBRE A GCN IMÓVEIS ========== -->
+  <section class="about-section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images reveal-left">
+          <div class="about-img-main">
+            <img src="img/escritorio.jpg" alt="Espaço de atendimento da GCN Imóveis no Vale do Jatobá" loading="lazy">
+          </div>
+          <div class="about-img-secondary">
+            <img src="img/bairro.jpg" alt="Vista panorâmica da região do Barreiro e Belo Horizonte" loading="lazy">
+          </div>
+          <div class="about-experience">
+            <span class="exp-number">PJ</span>
+            <span class="exp-label">CRECI 7064<br>GCN Imóveis</span>
+          </div>
+        </div>
+        
+        <div class="about-content reveal-right">
+          <p class="section-label">A Imobiliária</p>
+          <h2 class="section-title">Especialistas em negócios imobiliários no Barreiro e BH</h2>
+          <p class="about-text">
+            A <strong>GCN Imóveis</strong> é referência em intermediação imobiliária, sediada estrategicamente no Vale do Jatobá (Região do Barreiro), atuando em toda Belo Horizonte, Contagem, Ibirité, Sarzedo e Mário Campos.
+          </p>
+          <p class="about-text">
+            Nossa missão é garantir total segurança e transparência em cada negociação de compra, venda ou locação. Com profundo conhecimento prático dos bairros e dinâmica de mercado local, prestamos orientação consultiva personalizada para que cada cliente faça o melhor negócio.
+          </p>
+          
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Assessoria com CRECI</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">+10</span>
+              <span class="stat-label">Bairros e Regiões</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">Fácil</span>
+              <span class="stat-label">Aprovação & Negociação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SERVIÇOS ========== -->
+  <section class="services-section" id="servicos">
+    <div class="container">
+      <div class="services-intro reveal">
+        <p class="section-label">Nossos Serviços</p>
+        <h2 class="section-title">Soluções completas<br>para o seu imóvel</h2>
+        <p>Acompanhamos você em todas as etapas da jornada imobiliária com assessoria completa, seriedade e agilidade operacional.</p>
+      </div>
+      
+      <div class="services-grid stagger-children">
+        <div class="service-item">
+          <span class="service-number">01</span>
+          <h3 class="service-title">Compra e Venda de Imóveis</h3>
+          <p class="service-desc">Intermediação segura e criteriosa de casas, apartamentos, coberturas, lotes e imóveis comerciais em Belo Horizonte e região metropolitana.</p>
+        </div>
+        
+        <div class="service-item">
+          <span class="service-number">02</span>
+          <h3 class="service-title">Locação e Gestão Imobiliária</h3>
+          <p class="service-desc">Atendimento especializado para locatários e proprietários com análise cadastral criteriosa, elaboração de contratos e acompanhamento seguro.</p>
+        </div>
+        
+        <div class="service-item">
+          <span class="service-number">03</span>
+          <h3 class="service-title">Anuncie seu Imóvel</h3>
+          <p class="service-desc">Divulgação estratégica do seu imóvel nos principais canais e portais, atraindo compradores e locatários qualificados com agilidade.</p>
+        </div>
+        
+        <div class="service-item">
+          <span class="service-number">04</span>
+          <h3 class="service-title">Assessoria e Financiamento</h3>
+          <p class="service-desc">Orientação detalhada sobre linhas de financiamento bancário (Caixa Econômica e demais bancos), suporte documental e acompanhamento até a escritura.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== REGIÕES ========== -->
+  <section class="regions-section" id="regioes">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header-left">
+          <p class="section-label">Onde Atuamos</p>
+          <h2 class="section-title">Presença forte em<br>Belo Horizonte e Região</h2>
+        </div>
+      </div>
+      
+      <div class="regions-mosaic stagger-children">
+        <div class="region-card">
+          <img src="img/bairro.jpg" alt="Região do Barreiro e Vale do Jatobá em Belo Horizonte" loading="lazy">
+          <div class="region-card-overlay">
+            <h3 class="region-name">Belo Horizonte (Barreiro e Região)</h3>
+            <span class="region-count">Vale do Jatobá, Camargos, Jatobá e mais</span>
+          </div>
+        </div>
+        
+        <div class="region-card">
+          <img src="img/imovel-contagem.png" alt="Imóveis residenciais na região de Contagem" loading="lazy">
+          <div class="region-card-overlay">
+            <h3 class="region-name">Contagem</h3>
+            <span class="region-count">Bairro Europa, Jardim Riacho das Pedras e entorno</span>
+          </div>
+        </div>
+        
+        <div class="region-card">
+          <img src="img/hero.jpg" alt="Região Metropolitana - Ibirité, Sarzedo e Mário Campos" loading="lazy">
+          <div class="region-card-overlay">
+            <h3 class="region-name">Ibirité, Sarzedo & Mário Campos</h3>
+            <span class="region-count">Bairro Masterville, Palmeiras, Bela Vista e região</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== DEPOIMENTOS ========== -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-layout">
+        <div class="testimonial-aside reveal-left">
+          <p class="section-label">Experiência de Clientes</p>
+          <h2 class="section-title">Confiança conquistada com transparência</h2>
+          <p>A seriedade da GCN Imóveis se reflete na tranquilidade de clientes que realizaram seus sonhos e negócios conosco em Belo Horizonte e região.</p>
+        </div>
+        
+        <div class="testimonials-wrapper stagger-children">
+          <div class="testimonial-item">
+            <p class="testimonial-text">"Excelente atendimento desde a primeira visita até a conclusão do contrato. A equipe da GCN Imóveis esclareceu todas as dúvidas sobre o financiamento e nos deu total segurança na compra do nosso apartamento no Barreiro."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">C</div>
+              <div class="testimonial-meta">
+                <strong>Carlos & Mariana M.</strong>
+                <span>Compradores — Belo Horizonte</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-item">
+            <p class="testimonial-text">"Coloquei meu imóvel para vender com a GCN Imóveis e fiquei muito impressionado com o profissionalismo. Avaliação correta, fotos de qualidade e negociação transparente. Recomendo de olhos fechados!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">R</div>
+              <div class="testimonial-meta">
+                <strong>Roberto S.</strong>
+                <span>Proprietário — Contagem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== VISUAL BREAK ========== -->
+  <div class="visual-break">
+    <div class="visual-break-bg">
+      <img src="img/interior.jpg" alt="Interior planejado e acolhedor" loading="lazy" aria-hidden="true">
+    </div>
+    <div class="visual-break-overlay"></div>
+    <div class="visual-break-content reveal">
+      <p>O imóvel que você procura com as melhores opções de negociação.<br>Seu novo endereço começa com a GCN Imóveis.</p>
+    </div>
+  </div>
+
+
+  <!-- ========== CONTATO / CTA ========== -->
+  <section class="cta-section" id="contato">
+    <div class="container">
+      <div class="cta-grid">
+        <div class="cta-content reveal-left">
+          <p class="section-label">Fale com a GCN Imóveis</p>
+          <h2 class="section-title">Vamos conversar sobre<br>o seu próximo imóvel?</h2>
+          <p>Visite nossa sede na <strong>Av. Senador Levindo Coelho, 1907 - Sala 7</strong>, Conjunto Habitacional Vale do Jatobá (Barreiro), Belo Horizonte - MG, ou fale diretamente com nossos corretores pelos canais abaixo:</p>
+          
+          <div class="contact-channels">
+            <a href="https://wa.me/5531971760210?text=Olá,%20gostaria%20de%20informações%20sobre%20imóveis%20da%20GCN%20Imóveis" class="contact-channel" target="_blank" rel="noopener">
+              <div class="contact-channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.613.613l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.512-.767-6.262-2.063l-.437-.34-3.2 1.073 1.073-3.2-.34-.437A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              </div>
+              <div class="contact-channel-info">
+                <h4>WhatsApp (Venda & Aluguel)</h4>
+                <p>(31) 97176-0210</p>
+              </div>
+            </a>
+            
+            <a href="tel:+553135829770" class="contact-channel">
+              <div class="contact-channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div class="contact-channel-info">
+                <h4>Telefone Fixo</h4>
+                <p>(31) 3582-9770</p>
+              </div>
+            </a>
+            
+            <a href="https://www.instagram.com/g.c.n.imoveis" class="contact-channel" target="_blank" rel="noopener">
+              <div class="contact-channel-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+              <div class="contact-channel-info">
+                <h4>Instagram Oficial</h4>
+                <p>@g.c.n.imoveis</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="cta-image reveal-scale">
+          <img src="img/casa.jpg" alt="Residência moderna em Belo Horizonte e região" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo" aria-label="GCN Imóveis - Página inicial">
+            <img src="img/logo-gcn.png" alt="GCN Imóveis" class="footer-logo-img">
+          </a>
+          <p>
+            Av. Senador Levindo Coelho, 1907 - Sala 7<br>
+            Conjunto Habitacional Vale do Jatobá (Barreiro)<br>
+            Belo Horizonte - MG<br>
+            <strong style="color: rgba(255,255,255,0.7); display: inline-block; margin-top: 8px;">CRECI PJ 7064</strong>
+          </p>
+          
+          <div class="footer-social">
+            <a href="https://www.instagram.com/g.c.n.imoveis" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/GCNIMOVEIS/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Imóveis</h4>
+          <ul>
+            <li><a href="https://www.gcnimoveis.com.br/imoveis-a-venda" target="_blank" rel="noopener">Apartamentos à venda</a></li>
+            <li><a href="https://www.gcnimoveis.com.br/imoveis-a-venda" target="_blank" rel="noopener">Casas à venda</a></li>
+            <li><a href="https://www.gcnimoveis.com.br/imoveis-a-venda" target="_blank" rel="noopener">Coberturas à venda</a></li>
+            <li><a href="https://www.gcnimoveis.com.br/anuncie-seu-imovel" target="_blank" rel="noopener">Anuncie seu Imóvel</a></li>
+            <li><a href="https://www.gcnimoveis.com.br/imoveis-a-venda" target="_blank" rel="noopener">Lotes & Terrenos</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Regiões</h4>
+          <ul>
+            <li><a href="#regioes">Belo Horizonte (Barreiro)</a></li>
+            <li><a href="#regioes">Vale do Jatobá & Camargos</a></li>
+            <li><a href="#regioes">Contagem</a></li>
+            <li><a href="#regioes">Ibirité</a></li>
+            <li><a href="#regioes">Sarzedo & Mário Campos</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Institucional</h4>
+          <ul>
+            <li><a href="#sobre">A Imobiliária</a></li>
+            <li><a href="#servicos">Nossos Serviços</a></li>
+            <li><a href="#contato">Fale Conosco</a></li>
+            <li><a href="https://www.gcnimoveis.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 GCN Imóveis. Todos os direitos reservados. E-mail: contato@gcnimoveis.com.br</p>
+        <span class="footer-creci">CRECI PJ 7064 — Belo Horizonte/MG</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a href="https://wa.me/5531971760210?text=Olá,%20gostaria%20de%20informações%20sobre%20imóveis%20da%20GCN%20Imóveis" class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp da GCN Imóveis">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.613.613l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.34 0-4.512-.767-6.262-2.063l-.437-.34-3.2 1.073 1.073-3.2-.34-.437A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

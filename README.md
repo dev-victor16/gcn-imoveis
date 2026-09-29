@@ -44,11 +44,11 @@ Desenvolvido sob medida para proporcionar uma experiência visual sofisticada, f
 
 Como o projeto é construído em Vanilla HTML5, CSS3 e JavaScript puro, não requer instalação de dependências ou build:
 
-1. Abra a pasta do projeto e execute ou dê dois cliques no arquivo `index.html`.
-2. Para testar com servidor local:
+1. Clone o repositório:
    ```bash
-   npx serve .
+   git clone https://github.com/dev-victor16/gcn-imoveis.git
    ```
+2. Abra a pasta do projeto e execute ou dê dois cliques no arquivo `index.html`.
 
 ---
 
